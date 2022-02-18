@@ -1,0 +1,45 @@
+.card {
+  width: 320px;
+  margin: 10px;
+  transition: 0.2s ease-in;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    height: 50px;
+  }
+
+  .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .toCartButton {
+    width: 132px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #FE5F1E;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    transition: 0.2s ease-out;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #ffaa89;
+    }
+  }
+
+  .cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+}

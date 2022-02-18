@@ -1,0 +1,101 @@
+.app_wrapper {
+  background-color: #FFDF8C;
+  padding: 15px;
+  box-sizing: border-box;
+  height: 100vh;
+
+  .content_wrapper {
+    width: 100%;
+    height: 100%;
+
+    background-color: #fff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    overflow-y: scroll;
+  }
+}
+
+
+.cartButton {
+  span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  img {
+    width: 16px;
+    margin-right: 6px;
+  }
+}
+
+.active {
+
+  button {
+    background-color: red;
+  }
+}
+
+.app_header {
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #F7F7F7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  button {
+    width: 150px;
+    height: 50px;
+    background-color: #FE5F1E;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 50px;
+
+  }
+
+  .logo_wrapper {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img {
+      width: 38px;
+      height: 38px;
+    }
+  }
+  
+  .title_and_description_wrapper {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 24px;
+      color: #181818;
+    }
+
+    p {
+      font-size: 16px;
+      color: #7B7B7B
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+
+  &:hover {
+    background: #555;
+  }
+}
