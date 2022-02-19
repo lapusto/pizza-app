@@ -9,7 +9,12 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 15,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
+
   },
   {
     id: 1,
@@ -18,7 +23,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 15,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 2,
@@ -27,7 +36,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 40,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 3,
@@ -36,7 +49,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 20,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 4,
@@ -45,7 +62,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 27,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 5,
@@ -54,7 +75,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 30,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 6,
@@ -63,7 +88,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d2e337e9-e07a-4199-9cc1-501cc44cb8f8.jpg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 20,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 7,
@@ -72,7 +101,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d48003cd-902c-420d-9f28-92d9dc5f73b4.jpg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 32,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
 
   },
   {
@@ -82,7 +115,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 25,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
 
   },
   {
@@ -92,7 +129,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 27,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 10,
@@ -101,7 +142,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://images.dominos.by/media/dominos/osg/api/2021/03/23/rivyera_small_mNcDSaS.png',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 30,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
 
   },
   {
@@ -111,7 +156,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://images.dominos.by/media/dominos/osg/api/2018/09/12/5_syrov.png',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 25.49,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 12,
@@ -120,7 +169,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://images.dominos.by/media/dominos/osg/api/2019/07/03/bavarchkaya_small.png',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 24.39,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 13,
@@ -129,7 +182,11 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://images.dominos.by/media/dominos/osg/api/2018/09/12/ovoshchnaya.png',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 24.39,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
   {
     id: 14,
@@ -138,6 +195,10 @@ export const pizzaDescription: IpizzaDescription[] = [
     image: 'https://images.dominos.by/media/dominos/osg/api/2021/06/10/meksikanskaya_small.png',
     availableBase: ['thin', 'traditional'],
     availableSizes: ['small', 'medium', 'large'],
-    startPrice: 25.99,
+    price: {
+      small: 15,
+      medium: 20,
+      large: 25,
+    },
   },
 ];

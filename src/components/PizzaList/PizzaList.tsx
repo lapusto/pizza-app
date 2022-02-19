@@ -4,6 +4,7 @@ import styles from "./PizzaList.module.scss";
 import PizzaComponent from "../PizzaComponent/PizzaComponent";
 import { pizzaDescription } from "../../constants/pizzaDescription";
 
+
 const PizzaList: React.FC = () => {
   const pizzaList = pizzaDescription
   return (
@@ -15,8 +16,8 @@ const PizzaList: React.FC = () => {
               key={pizza.id}
               id={pizza.id}
               imgSrc={pizza.image}
-              startPrice={pizza.startPrice}
-              name={pizza.title}
+                           name={pizza.title}
+              objPrice={pizza.price}
               availableSizes={pizza.availableSizes}
               availableBase={pizza.availableBase}
             />

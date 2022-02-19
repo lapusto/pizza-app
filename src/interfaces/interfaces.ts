@@ -1,10 +1,10 @@
-import { 
+import {
   ADD_NEW_PIZZA_TO_CART,
   CLEAR_CART,
   REDUCE_COUNT,
   INCREASE_COUNT,
   DELETE_ORDER,
-   LOAD_CART_STATE
+  LOAD_CART_STATE
 } from '../constants/actionTypes'
 
 export interface IpizzaDescription {
@@ -14,14 +14,14 @@ export interface IpizzaDescription {
   image: string,
   availableBase: string[],
   availableSizes: string[],
-  startPrice: number,
-  }
+  price?: object,
+}
 
 export interface IpizzaProps {
+  objPrice: any
   id: number
   imgSrc: string
-  startPrice: number
-  name: string
+   name: string
   availableSizes: string[]
   availableBase: string[]
 }
@@ -89,11 +89,11 @@ export type loadCartStateActionType = {
   type: typeof LOAD_CART_STATE
 }
 
-export type cartReducerActionsTypes = 
-  reduceCountActionType 
-| increaseCountActionType 
-| addNewPizzaToCartActionType 
-| clearCartActionType 
-| deleteOrderActionType
-| loadCartStateActionType
+export type cartReducerActionsTypes =
+  reduceCountActionType
+  | increaseCountActionType
+  | addNewPizzaToCartActionType
+  | clearCartActionType
+  | deleteOrderActionType
+  | loadCartStateActionType
 
