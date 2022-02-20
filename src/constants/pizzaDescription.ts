@@ -14,6 +14,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
 
   },
   {
@@ -28,6 +34,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 2,
@@ -41,6 +53,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 3,
@@ -54,6 +72,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 4,
@@ -67,6 +91,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 5,
@@ -80,6 +110,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 6,
@@ -93,6 +129,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 7,
@@ -106,6 +148,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
 
   },
   {
@@ -120,6 +168,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
 
   },
   {
@@ -134,6 +188,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 10,
@@ -147,6 +207,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
 
   },
   {
@@ -161,6 +227,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 12,
@@ -174,6 +246,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 13,
@@ -187,6 +265,12 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
   {
     id: 14,
@@ -200,5 +284,11 @@ export const pizzaDescription: IpizzaDescription[] = [
       medium: 20,
       large: 25,
     },
+    topping: {
+      olives: 3,
+      pepperoni: 4,
+      mushrooms: 2,
+      pepper: 2
+    }
   },
 ];

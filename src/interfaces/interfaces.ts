@@ -14,14 +14,16 @@ export interface IpizzaDescription {
   image: string,
   availableBase: string[],
   availableSizes: string[],
-  price?: object,
+  price: object,
+  topping?: object
 }
 
 export interface IpizzaProps {
   objPrice: any
+  toppingPrice: any
   id: number
   imgSrc: string
-   name: string
+  name: string
   availableSizes: string[]
   availableBase: string[]
 }
@@ -33,6 +35,7 @@ export interface PizzaConstructorPropsInterface {
   size: string
   baseHandler: (event: React.MouseEvent<HTMLButtonElement>) => void
   sizeHandler: (event: React.MouseEvent<HTMLButtonElement>) => void
+  toppingHandler: (event: React.MouseEvent<HTMLButtonElement>) => void
 }
 
 export type sortingModeParameterType = 'price' | 'popularity' | 'alphabet';

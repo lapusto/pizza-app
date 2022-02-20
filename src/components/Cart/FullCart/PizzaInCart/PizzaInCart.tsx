@@ -108,25 +108,25 @@ const PizzaInCart: React.FC<PizzaInCartPropsInterface> = ({
         </div>
       </div>
 
-      <div className={styles.counter}>
-        <button
-          onClick={() => {
-            reduceCountHandler(id, base, size);
-          }}
-        >
-          -
-        </button>
-        <span>{count}</span>
-        <button
-          onClick={() => {
-            increaseCountHandler(id, base, size);
-          }}
-        >
-          +
-        </button>
+      <div>
+        <div className={styles.counter}>
+          <button
+            onClick={() => {
+              reduceCountHandler(id, base, size);
+            }}
+          >
+            -
+          </button>
+          <span>{count}</span>
+          <button
+            onClick={() => {
+              increaseCountHandler(id, base, size);
+            }}
+          >
+            +
+          </button>
+        </div>
       </div>
-
-      <div></div>
 
       <div className={styles.price_wrapper}>
         {`$${(count * price).toFixed(0)}`}

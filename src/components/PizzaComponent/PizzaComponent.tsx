@@ -4,11 +4,13 @@ import PizzaConstructor from "../PizzaConstructor/PizzaConstructor";
 import { addNewPizzaToCart } from "../../store/actions";
 import styles from "./PizzaComponent.module.scss";
 import { useDispatch } from "react-redux";
+import { toppingConstructorButtons } from "../../constants/constructorButtons";
 
 const PizzaComponent: React.FC<IpizzaProps> = ({
   id,
   imgSrc,
   objPrice,
+  toppingPrice,
   name,
   availableSizes,
   availableBase,
@@ -19,7 +21,7 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
     name: name,
     base: availableBase[0],
     size: availableSizes[0],
-    price: 15
+    price: 15,
   });
 
   const dispatch = useDispatch();
@@ -39,6 +41,15 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
     });
   };
 
+  const toppingHandler = (event: any) => {
+    const toppingsAddedPrice = toppingPrice[event.target.value];
+    setPizzaComponentState({
+      ...pizzaComponentState,
+      price: pizzaComponentState.price + toppingPrice[event.target.value],
+    });
+    return toppingsAddedPrice;
+  };
+
   const addToCartHandler = () => {
     console.log(pizzaComponentState);
     dispatch(addNewPizzaToCart(pizzaComponentState));
@@ -50,6 +61,7 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
       <h3>{name}</h3>
 
       <PizzaConstructor
+        toppingHandler={toppingHandler}
         baseHandler={baseHandler}
         sizeHandler={sizeHandler}
         base={pizzaComponentState.base}
@@ -59,9 +71,7 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
       />
 
       <div className={styles.cardFooter}>
-        <div className={styles.price}>
-          from ${objPrice[pizzaComponentState.size]}
-        </div>
+        <div className={styles.price}>${pizzaComponentState.price}</div>
         <button className={styles.toCartButton} onClick={addToCartHandler}>
           Add to cart
         </button>
