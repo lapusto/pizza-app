@@ -51,11 +51,20 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
   };
 
   const toppingHandler = (event: any) => {
-       setPizzaComponentState({
-      ...pizzaComponentState,
-      price: (pizzaComponentState.price + toppingPrice[event.target.value]),
-    // toppings: {[event.target.value]: event.target.checked}
-     }) 	  
+    if (event.target.checked) {
+      setPizzaComponentState({
+        ...pizzaComponentState,
+        price: (pizzaComponentState.price + toppingPrice[event.target.value]),
+      // toppings: {[event.target.value]: event.target.checked}
+       }) 	 
+    } else {
+      setPizzaComponentState({
+        ...pizzaComponentState,
+        price: (pizzaComponentState.price - toppingPrice[event.target.value]),
+      // toppings: {[event.target.value]: event.target.checked}
+       }) 	 
+    }
+       
   };
 
   const addToCartHandler = () => {

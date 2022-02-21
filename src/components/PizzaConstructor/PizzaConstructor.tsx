@@ -48,48 +48,22 @@ const PizzaConstructor: React.FC<PizzaConstructorPropsInterface> = ({
         })}
       </div>
       <div className={styles.toppingList}>
-        <div>
-          {toppingConstructorButtons.map((topping, index) => {
-            if (index <= 1) {
-              return (
-                <div className={styles.topping} key={index}>
-                  <input
-                  className={styles.toppingCheckbox}
-                    type="checkbox"
-                    id={topping.category}
-                    name={topping.category}
-                    value={topping.category}
-                    onChange={checkboxHandler}
-                  />
-                  <label htmlFor={topping.category}>
-                    {topping.category} (+${topping.price})
-                  </label>
-                </div>
-              );
-            }
-          })}
-        </div>
-        <div>
-          {toppingConstructorButtons.map((topping, index) => {
-            if (index > 1) {
-              return (
-                <div className={styles.topping} key={index}>
-                  <input
-                  className={styles.toppingCheckbox}
-                    type="checkbox"
-                    id={topping.category}
-                    name={topping.category}
-                    value={topping.category}
-                    onChange={checkboxHandler}
-                  />
-                  <label htmlFor={topping.category}>
-                    {topping.category} (+${topping.price})
-                  </label>
-                </div>
-              );
-            }
-          })}
-        </div>
+        {toppingConstructorButtons.map((topping, index) => {
+          return (
+            <div className={styles.topping} key={index}>
+              <label>
+                <input className={styles.toppingCheckbox}
+                  type="checkbox"
+                  name={topping.category}
+                  value={topping.category}
+                  onChange={checkboxHandler}
+                />
+                <span/>
+                {topping.category} (+${topping.price})
+              </label>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

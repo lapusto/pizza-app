@@ -35,34 +35,17 @@
     padding: 0 5px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 
     .topping {
       height: 25px;
-      width: 120px;
-      margin-left: 10px;
-      margin-right: 35px;
-      
-
-      .toppingCheckbox {
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-      }
-      .toppingCheckbox:checked + label::before {
-        background-color: #ffdf8c;
-        border: 1px solid #ffdf8c;
-        content: "\2713";
-        color: #fe5f1e;
-        text-align: center;
-        font-size: 1em;
-        font-weight: bold;
-      }
+      width: 50%;
 
       label {
         display: inline-flex;
         align-items: center;
         font-size: 1.1em;
+        position: relative;
       }
       label::before {
         content: "";
@@ -77,6 +60,35 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50% 50%;
+      }
+
+      label input:checked + span::before {
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: #ffdf8c;
+        border: 1px solid #ffdf8c;
+        content: "\2713";
+        color: #fe5f1e;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
+      }
+
+      .toppingCheckbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      }
+
+      label::before + .toppingCheckbox:checked {
+        background-color: #ffdf8c;
+        border: 1px solid #ffdf8c;
+        content: "\2713";
+        color: #fe5f1e;
+        text-align: center;
+        font-size: 1em;
+        font-weight: bold;
       }
     }
   }
