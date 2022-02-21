@@ -22,12 +22,12 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
     base: availableBase[0],
     size: availableSizes[0],
     price: 15,
-    toppings: {
-      olives: false,
-      pepperoni: false,
-      mushrooms: false,
-      pepper: false
-    }
+    // toppings: {
+    //   olives: false,
+    //   pepperoni: false,
+    //   mushrooms: false,
+    //   pepper: false
+    // }
   });
 
 
@@ -51,10 +51,9 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
   };
 
   const toppingHandler = (event: any) => {
-  
-     setPizzaComponentState({
+       setPizzaComponentState({
       ...pizzaComponentState,
-      price: pizzaComponentState.price + toppingPrice[event.target.value],
+      price: (pizzaComponentState.price + toppingPrice[event.target.value]),
     // toppings: {[event.target.value]: event.target.checked}
      }) 	  
   };
@@ -65,7 +64,7 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
   };
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} test-id="pizza-card">
       <img src={imgSrc} alt="pizza" />
       <h3>{name}</h3>
 

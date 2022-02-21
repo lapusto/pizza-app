@@ -54,6 +54,7 @@ const PizzaConstructor: React.FC<PizzaConstructorPropsInterface> = ({
               return (
                 <div className={styles.topping} key={index}>
                   <input
+                  className={styles.toppingCheckbox}
                     type="checkbox"
                     id={topping.category}
                     name={topping.category}
@@ -74,6 +75,7 @@ const PizzaConstructor: React.FC<PizzaConstructorPropsInterface> = ({
               return (
                 <div className={styles.topping} key={index}>
                   <input
+                  className={styles.toppingCheckbox}
                     type="checkbox"
                     id={topping.category}
                     name={topping.category}
