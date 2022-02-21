@@ -19,7 +19,7 @@ export interface IpizzaDescription {
 }
 
 export interface IpizzaProps {
-  objPrice: any
+  pizzaSizePrice: any
   toppingPrice: any
   id: number
   imgSrc: string

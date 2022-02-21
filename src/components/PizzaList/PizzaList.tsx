@@ -17,7 +17,7 @@ const PizzaList: React.FC = () => {
               id={pizza.id}
               imgSrc={pizza.image}
               name={pizza.title}
-              objPrice={pizza.price}
+              pizzaSizePrice={pizza.price}
               toppingPrice={pizza.topping}
               availableSizes={pizza.availableSizes}
               availableBase={pizza.availableBase}

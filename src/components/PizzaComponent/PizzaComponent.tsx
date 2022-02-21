@@ -9,7 +9,7 @@ import { toppingConstructorButtons } from "../../constants/constructorButtons";
 const PizzaComponent: React.FC<IpizzaProps> = ({
   id,
   imgSrc,
-  objPrice,
+  pizzaSizePrice,
   toppingPrice,
   name,
   availableSizes,
@@ -22,7 +22,16 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
     base: availableBase[0],
     size: availableSizes[0],
     price: 15,
+    toppings: {
+      olives: false,
+      pepperoni: false,
+      mushrooms: false,
+      pepper: false
+    }
   });
+
+
+
 
   const dispatch = useDispatch();
 
@@ -37,17 +46,17 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
     setPizzaComponentState({
       ...pizzaComponentState,
       size: event.target.value,
-      price: objPrice[event.target.value],
+      price: pizzaSizePrice[event.target.value],
     });
   };
 
   const toppingHandler = (event: any) => {
-    const toppingsAddedPrice = toppingPrice[event.target.value];
-    setPizzaComponentState({
+  
+     setPizzaComponentState({
       ...pizzaComponentState,
       price: pizzaComponentState.price + toppingPrice[event.target.value],
-    });
-    return toppingsAddedPrice;
+    // toppings: {[event.target.value]: event.target.checked}
+     }) 	  
   };
 
   const addToCartHandler = () => {

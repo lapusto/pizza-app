@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { PizzaConstructorPropsInterface } from "../../interfaces/interfaces";
 import {
   baseConstructorButtons,
@@ -14,7 +14,7 @@ const PizzaConstructor: React.FC<PizzaConstructorPropsInterface> = ({
   base,
   size,
 }) => {
-  const logger = (e: any) => {
+  const checkboxHandler = (e: any) => {
     toppingHandler(e);
   };
   return (
@@ -52,14 +52,13 @@ const PizzaConstructor: React.FC<PizzaConstructorPropsInterface> = ({
           {toppingConstructorButtons.map((topping, index) => {
             if (index <= 1) {
               return (
-                <div className={styles.topping}>
+                <div className={styles.topping} key={index}>
                   <input
-                    key={index}
                     type="checkbox"
                     id={topping.category}
                     name={topping.category}
                     value={topping.category}
-                    onChange={logger}
+                    onChange={checkboxHandler}
                   />
                   <label htmlFor={topping.category}>
                     {topping.category} (+${topping.price})
@@ -73,14 +72,13 @@ const PizzaConstructor: React.FC<PizzaConstructorPropsInterface> = ({
           {toppingConstructorButtons.map((topping, index) => {
             if (index > 1) {
               return (
-                <div className={styles.topping}>
+                <div className={styles.topping} key={index}>
                   <input
-                    key={index}
                     type="checkbox"
                     id={topping.category}
                     name={topping.category}
                     value={topping.category}
-                    onChange={logger}
+                    onChange={checkboxHandler}
                   />
                   <label htmlFor={topping.category}>
                     {topping.category} (+${topping.price})
