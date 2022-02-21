@@ -1,9 +1,8 @@
-import React from 'react';
-import CartButton from './CartButton/CartButton';
-import pizza from '../../images/pizza-icon.png';
-import styles from './AppHeader.module.scss';
-import { Link } from 'react-router-dom';
-
+import React from "react";
+import CartButton from "./CartButton/CartButton";
+import pizza from "../../images/pizza-icon.png";
+import styles from "./AppHeader.module.scss";
+import { Link } from "react-router-dom";
 
 const AppHeader: React.FC = () => {
   return (
@@ -12,15 +11,16 @@ const AppHeader: React.FC = () => {
         <div className={styles.logo_wrapper}>
           <img src={pizza} alt="pizza-icon" />
           <div className={styles.title_and_description_wrapper}>
-            <h1>REACT PIZZA</h1>
-            <p>the best pizza in the universe</p>
+            <h1> PIZZA TEST</h1>
           </div>
         </div>
-          <Link to='/cart'><CartButton/></Link>  
+        <Link to="/cart">
+          <CartButton />
+        </Link>
       </header>
-      <br/>    
+      <br />
     </>
-  )
-}
+  );
+};
 
 export default AppHeader;

@@ -22,16 +22,14 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
     base: availableBase[0],
     size: availableSizes[0],
     price: 15,
-    // toppings: {
-    //   olives: false,
-    //   pepperoni: false,
-    //   mushrooms: false,
-    //   pepper: false
-    // }
+    toppingsPrice: 0,
+    toppings: {
+      olives: false,
+      pepperoni: false,
+      mushrooms: false,
+      pepper: false,
+    },
   });
-
-
-
 
   const dispatch = useDispatch();
 
@@ -54,22 +52,32 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
     if (event.target.checked) {
       setPizzaComponentState({
         ...pizzaComponentState,
-        price: (pizzaComponentState.price + toppingPrice[event.target.value]),
-      // toppings: {[event.target.value]: event.target.checked}
-       }) 	 
+        toppingsPrice:
+          pizzaComponentState.toppingsPrice + toppingPrice[event.target.value],
+        toppings: {
+          ...pizzaComponentState.toppings,
+          [event.target.value]: event.target.checked,
+        },
+      });
     } else {
       setPizzaComponentState({
         ...pizzaComponentState,
-        price: (pizzaComponentState.price - toppingPrice[event.target.value]),
-      // toppings: {[event.target.value]: event.target.checked}
-       }) 	 
+        toppingsPrice:
+          pizzaComponentState.toppingsPrice - toppingPrice[event.target.value],
+        toppings: {
+          ...pizzaComponentState.toppings,
+          [event.target.value]: event.target.checked,
+        },
+      });
     }
-       
   };
 
   const addToCartHandler = () => {
-    console.log(pizzaComponentState);
     dispatch(addNewPizzaToCart(pizzaComponentState));
+  };
+
+  const showFullPrice = () => {
+    return pizzaComponentState.price + pizzaComponentState.toppingsPrice;
   };
 
   return (
@@ -88,7 +96,7 @@ const PizzaComponent: React.FC<IpizzaProps> = ({
       />
 
       <div className={styles.cardFooter}>
-        <div className={styles.price}>${pizzaComponentState.price}</div>
+        <div className={styles.price}>${showFullPrice()}</div>
         <button className={styles.toCartButton} onClick={addToCartHandler}>
           Add to cart
         </button>

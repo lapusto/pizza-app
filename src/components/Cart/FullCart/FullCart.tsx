@@ -30,7 +30,7 @@ const FullCart: React.FC = () => {
   }, 0);
 
   const totalPrice = cartStateCopy.reduce((acc, curr) => {
-    return acc + curr.count * curr.price;
+        return acc + curr.count * (curr.price + curr.toppingsPrice) ;
   }, 0);
 
   return (
@@ -57,6 +57,8 @@ const FullCart: React.FC = () => {
               base={pizza.base}
               size={pizza.size}
               price={pizza.price}
+              toppings={pizza.toppings}
+              toppingsPrice={pizza.toppingsPrice}
             />
           ))}
           <div className={styles.totals}>

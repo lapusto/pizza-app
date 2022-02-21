@@ -52,6 +52,8 @@ export interface cartPizzaInterface {
   base: string,
   size: string,
   price: number,
+  toppings: object
+  toppingsPrice: number
 }
 
 export interface cartPizzaStateInterface {
@@ -61,7 +63,9 @@ export interface cartPizzaStateInterface {
   base: string,
   size: string,
   price: number,
-  count: number
+  count: number,
+  toppings: object,
+  toppingsPrice: number
 }
 
 export type addNewPizzaToCartActionType = {

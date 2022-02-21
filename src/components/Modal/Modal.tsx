@@ -27,52 +27,58 @@ const Modal: React.FC<ModalPropsInterface> = ({ onModalClose, isOpened }) => {
           </button>
         </div>
 
-        <hr />
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <label>
-            {" "}
-            Name:
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.modalForm}>
+          <div className={styles.formFieldWrapper}>
             <input
+              placeholder="Name"
               {...register("name", { required: "please enter your name" })}
             />
-          </label>
-          <div>{errors?.name && <p>{errors?.name?.message || "Error"}</p>}</div>
 
-          <label>
-            Address:
+            <div className={styles.errors}>
+              {errors?.name && <p>{errors?.name?.message || "Error"}</p>}
+            </div>
+          </div>
+
+          <div className={styles.formFieldWrapper}>
             <input
+              placeholder="Address"
               {...register("address", {
                 required: "please enter your address",
               })}
             />
-          </label>
-          <div>
-            {errors?.address && <p>{errors?.address?.message || "Error"}</p>}
+
+            <div className={styles.errors}>
+              {errors?.address && <p>{errors?.address?.message || "Error"}</p>}
+            </div>
           </div>
 
-          <label>
-            Phone number:
+          <div className={styles.formFieldWrapper}>
             <input
+              placeholder="Phone"
               {...register("phone", {
                 required: "please enter your phone number",
               })}
             />
-          </label>
-          <div>
-            {errors?.phone && <p>{errors?.phone?.message || "Error"}</p>}
+
+            <div className={styles.errors}>
+              {errors?.phone && <p>{errors?.phone?.message || "Error"}</p>}
+            </div>
           </div>
 
-          <label>
-            Credit card number:
+          <div className={styles.formFieldWrapper}>
             <input
+              placeholder="Credit card"
               {...register("card", {
                 required: "please enter your credit card number",
                 pattern:
                   /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/,
               })}
             />
-          </label>
-          <div>{errors?.card && <p>enter 16 digits of your card</p>}</div>
+
+            <div className={styles.errors}>
+              {errors?.card && <p>enter 16 digits of your card</p>}
+            </div>
+          </div>
 
           <input type="submit" value="Submit" className={styles.submit} />
         </form>

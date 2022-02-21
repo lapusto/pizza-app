@@ -18,6 +18,8 @@ interface PizzaInCartPropsInterface {
   base: string;
   size: string;
   price: number;
+  toppings: object;
+  toppingsPrice: number;
 }
 
 const PizzaInCart: React.FC<PizzaInCartPropsInterface> = ({
@@ -28,6 +30,8 @@ const PizzaInCart: React.FC<PizzaInCartPropsInterface> = ({
   base,
   size,
   price,
+  toppings,
+  toppingsPrice,
 }) => {
   const cartState = useSelector<RootState, cartPizzaStateInterface[]>(
     (state) => state.cartReducer
@@ -105,6 +109,11 @@ const PizzaInCart: React.FC<PizzaInCartPropsInterface> = ({
         <div>
           <h4>{name}</h4>
           <p>{`${base}, ${size}`}</p>
+          {Object.entries(toppings)
+            .filter((t) => t[1])
+            .map((t) => (
+              <p> + {t[0]}</p>
+            ))}
         </div>
       </div>
 
@@ -129,7 +138,7 @@ const PizzaInCart: React.FC<PizzaInCartPropsInterface> = ({
       </div>
 
       <div className={styles.price_wrapper}>
-        {`$${(count * price).toFixed(0)}`}
+        {`$${count * (price + toppingsPrice)}`}
       </div>
 
       <button

@@ -6,3 +6,4 @@ export const toppingConstructorButtons = [
   { category: "mushrooms", price: 2 },
   { category: "pepper", price: 2 }
 ];
+
